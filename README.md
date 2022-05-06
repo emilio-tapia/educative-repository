@@ -4,17 +4,11 @@
 
 This repository contains all my educative & practice projects. Only plain HTML/CSS/JS or Vanilla JS. :tada:
 
-| PROJECT NAME               | DEMO                              |
-| -------------------------- | --------------------------------- |
-| Neon Game                  | BASIC FUNCTIONS                   |
-| Addition Widget            | COLORS                            |
-| Loan Calculator            | OPERATORS & VARIABLES             |
-| Quote of the Day           | CONDITIONAL & COMPARATORS         |
-| Tip Calculator             | MORE VARIABLES                    |
-| To-Do List w/Local Storage | LOOPS                             |
-| 8                          | FUNCTIONS                         |
-| 9                          | OBJECTS                           |
-| 10                         | ARRAYS                            |
-| 11                         | EVENTS                            |
-| 12                         | ROTATION & TRANSLATE / PUSH & POP |
-| 13                         | FINAL PROJECT - NUMBER GAME       |
+| PROJECT NAME               | DEMO                                             |
+| -------------------------- | ------------------------------------------------ |
+| Neon Game                  | [Demo](https://codepen.io/emilio_ta/pen/mdXemEb) |
+| Addition Widget            | [Demo](https://codepen.io/emilio_ta/pen/mdXemWd) |
+| Loan Calculator            | [Demo](https://codepen.io/emilio_ta/pen/xxYwdYM) |
+| Quote of the Day           | [Demo](https://codepen.io/emilio_ta/pen/YzeyVLz) |
+| Tip Calculator             | [Demo](https://codepen.io/emilio_ta/pen/xxYwdaB) |
+| To-Do List w/Local Storage | [Demo](https://codepen.io/emilio_ta/pen/rNJOmqq) |

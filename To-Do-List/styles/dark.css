@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+:root{
+    --primary-font: 'Quicksand'; 
+
+
+    --white:#fff;
+    --black:#000;
+    --primary-light: #f9fafb;
+    --second-light:#f0f0f0;
+
+    --primary-grey:#777;
+    --second-grey:#4f4f4f;
+    --third-grey:#DADBDB;
+    
+    --first-shadow: rgba(0,0,0,0.3);
+
+    --success: rgba(61, 168, 102, 0.6);
+    --error: rgba(160, 51, 39, 0.4);
+
+    --first-color:#4c8061;
+    --second-color: rgba(63, 50, 83, 0.5);
+}
+
+/* GLOBAL CONFIG RESET */
+* {
+    box-sizing: border-box;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+    }
+    
+/* BODY DISPLAY */
+body {
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    font-family: var(--primary-font), sans-serif;
+    background-color: var(--primary-light);
+    background-image: linear-gradient(
+        0deg,
+        hsl(144deg 25% 40%) 13%,
+        hsl(144deg 23% 43%) 35%,
+        hsl(143deg 20% 46%) 42%,
+        hsl(143deg 18% 48%) 46%,
+        hsl(142deg 16% 51%) 48%,
+        hsl(142deg 16% 54%) 50%,
+        hsl(142deg 16% 57%) 50%,
+        hsl(141deg 16% 59%) 50%,
+        hsl(141deg 16% 62%) 50%,
+        hsl(141deg 15% 65%) 50%,
+        hsl(141deg 15% 68%) 50%,
+        hsl(141deg 15% 70%) 50%,
+        hsl(140deg 14% 73%) 50%,
+        hsl(140deg 14% 76%) 50%,
+        hsl(140deg 13% 79%) 50%,
+        hsl(140deg 12% 82%) 52%,
+        hsl(140deg 11% 85%) 54%,
+        hsl(140deg 9% 88%) 58%,
+        hsl(139deg 6% 90%) 65%,
+        hsl(0deg 0% 93%) 87%
+        );
+
+    display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+}
+
+button{
+    cursor: pointer;
+}
+
+button:active{
+    transform: scale(0.85);
+}
+
+input{
+    color: transparent !important;
+    text-shadow: 0 0 0 var(--primary-light);
+}
+
+input:focus{
+    outline: none;
+}
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+  cursor: none;
+}
+
+/* ****************** ******************* */

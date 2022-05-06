@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
+
+:root{
+  --white:#fff;
+  --black:#000;
+  --primary-light: #f9fafb;
+  --second-light:#f0f0f0;
+  --third-light:#DADBDB;
+
+  --primary-grey:#777;
+  --second-grey:#4f4f4f;
+  
+  --first-shadow: rgba(0,0,0,0.15);
+
+  --success: rgba(61, 168, 102, 0.6);
+  --error: rgba(168, 30, 14, 0.6);
+
+  --first-color:#4c8061;
+}
+
+/* GLOBAL CONFIG RESET */
+* {
+box-sizing: border-box;
+font-size: 1rem;
+margin: 0;
+padding: 0;
+}
+
+/* BODY DISPLAY */
+body {
+font-family: 'Libre Baskerville', sans-serif;
+background-color: var(--primary-light);
+background-image: url('https://images.unsplash.com/photo-1604705060039-5daf68aaf7b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=930&q=80');
+background-size: 100vw;
+background-origin: border-box;
+background-repeat: no-repeat;
+background-position: 0px -20vh;
+overflow: hidden;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+height: 100vh;
+
+}
+
+button{
+  cursor: pointer;
+}
+
+button:active{
+  transform: translateY(0.11vh);
+}
+
+button:disabled{
+  background-color: transparent;
+  transition: 0.22s ease-in-out;
+
+}
+
+button:enabled, 
+button:enabled:hover {
+  transition: 0.66s ease-in-out;
+}
+
+button:disabled:active{
+  transform: translateY(0vh);
+}
+
+button:disabled:hover{
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: not-allowed;
+}
+
+input{
+  color: transparent !important;
+  text-shadow: 0 0 0 var(--primary-light);
+}
+
+input:focus{
+  outline: none;
+}
+
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+-webkit-appearance: none; 
+margin: 0; 
+cursor: none;
+}
+
+/* ****************** GLOBAL ******************* */
+
+.glass{
+  border-radius: .5em;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(13.1px);
+  -webkit-backdrop-filter: blur(13.1px);
+  /* border: 1px solid rgba(0, 0, 0, 0.1); */
+  z-index: 2;
+  transition: box-shadow 0.1s ease-in-out;
+}
+
+
+/* ****************** ******************* */
+
+.container{
+  position: relative;
+}
+
+/* ****************** TITLE CONTAINER ******************* */
+
+.title-container{
+  /* border: 1px solid black; */
+  position: fixed;
+  top: 5vh;
+  left: 2vw;
+  padding: 2vh 2vw;
+}
+
+.title-container h1{
+  text-transform: uppercase;
+  font-size: 3vw;
+  margin-top: -1.5vh;
+}
+
+.title-container h1 span{
+  font-size: 6vw;
+}
+
+/* ****************** TOOL BUTTON CONTAINER ******************* */
+
+.btn-container{
+  /* border: 1px solid black; */
+  text-transform: uppercase;
+  font-family: inherit;
+  text-align: center;
+  display: flex;
+    flex-direction: row;   
+    justify-content: center;
+    align-items: center;
+  position: fixed;
+  top: 5vh;
+  right: 2vw;
+  padding: 0.5vh 1vw;
+  border: 0;
+}
+
+.btn-container button,
+.btn-container h3{
+  font-size: 1vw;
+}
+
+.btn-circle{
+  font-family: inherit;
+  border: 1px solid var(--second-grey);
+  background-color: var(--error);
+  border-radius: 50%;
+  /* background-color: transparent; */
+  margin: 1vh 1vw;
+  padding: 1vw;
+}
+
+.btn-container:hover{
+  box-shadow: 
+  0 3px 5px rgba(0, 0, 0, 0.4),
+  0 3px 2px rgba(0, 0, 0, 0.3);
+  transition: box-shadow 0.22s ease-in-out;
+}
+
+.btn-container:active{
+  box-shadow: 
+  0 0px 1px -1px rgba(0, 0, 0, 0.7),
+  0 1px 2px 0px rgba(0, 0, 0, 0.4),
+  inset 1px 1px 4px -1px rgba(0, 0, 0, 0.8);
+  transition: box-shadow 0.1s ease-in-out;
+}
+
+/* ****************** QUOTE CONTAINER ******************* */
+
+.fa-quote-left,
+.fa-quote-right{
+  width: 100px;
+  height: 100px;
+  color: black;
+}
+
+.quote-container{
+  border: 0.1px solid var(--first-shadow);
+  /* width: 100%; */
+  position: relative;
+  top: -1vh;
+  left: 0;
+  margin: 0 15vw;
+  padding: 3vh 3vw 2vh;
+  border-bottom: 4px solid var(--first-shadow);
+
+}
+
+.words{
+  font-size: 2.22vw;
+}
+
+.author{
+  margin: 1vh 1vw 0vh;
+  font-size: 1.333vw;
+  display: block;
+  text-align: right;
+}
+
+.openAnimation{
+  opacity: 0;
+  animation: openUp 2s forwards;
+  animation-timing-function: ease-in-out;
+  animation-delay: 500ms;
+}
+
+@keyframes openUp {
+  0%{
+      opacity: 0;
+  } 
+  100%{
+      opacity: 1;
+  } 
+}
+
+.changeAnimation{
+  animation: changeQuote 2s forwards;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes changeQuote {
+  0%{
+      opacity: 1;
+  } 
+  40%{
+      opacity: 0;
+  } 
+  100%{
+      opacity: 1;
+  } 
+}
