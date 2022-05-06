@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
+
+:root{
+  --white:#fff;
+  --black:#000;
+  --primary-light: #f9fafb;
+  --second-light:#f0f0f0;
+  --third-light:#DADBDB;
+
+  --primary-grey:#777;
+  --second-grey:#4f4f4f;
+  
+  --first-shadow: rgba(0,0,0,0.3);
+
+  --success: rgba(61, 168, 102, 0.6);
+  --error: rgba(168, 30, 14, 0.6);
+
+  --first-color:#4c8061;
+}
+
+/* GLOBAL CONFIG */
+* {
+box-sizing: border-box;
+font-size: 1rem;
+margin: 0;
+padding: 0;
+}
+
+/* GLOBAL RESET */
+body {
+  overflow: hidden;
+}
+
+/* GLOBAL DISPLAY */
+body{
+font-family: 'Open-Sans', sans-serif;
+background-color: var(--first-shadow);
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+height: 100vh;
+transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+
+}
+
+body.sucess{
+  background-color: var(--success);
+}
+
+body.error{
+  background-color: var(--error);
+}
+
+.score{
+  display: inline-block;
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 2rem;
+}
+
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--third-light);
+  padding: 15px 20px;
+  border-radius: 7px;
+  border: 1px solid var(--second-grey);
+  box-shadow: 0px 4px 10px 2px var(--first-shadow);
+}
+
+.container p,
+.container p span{
+  font-size: 3rem;
+
+}
+
+.container input{
+  width: 90px;
+  height: 60px;
+  margin: 0 10px;
+  font-size: 3rem;
+  text-align: center;
+  border: 0;
+  background-color: transparent;
+  border-bottom: 2px solid var(--second-grey);
+}
+
+.container input:focus{
+  outline: none;
+}
+
+/* SPINNER INPUT */
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+  cursor: none;
+}
+
+.check:disabled{
+  position: relative;
+  top: 20px;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  background-color: transparent;
+  text-transform: uppercase;
+  color: var(--first-shadow);
+  border: 1px solid  var(--first-shadow);
+  border-radius: 7px;
+  transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.check:enabled{
+  position: relative;
+  top: 20px;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  border: 0;
+  background-color: transparent;
+  text-transform: uppercase; 
+  cursor: pointer;
+  border: 1px solid  var(--second-grey);
+  border-radius: 7px;
+  background-color: var(--third-light);
+  box-shadow: 0px 4px 10px 2px var(--first-shadow);
+  transition: 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+
+.check:active{
+  transform: scale(0.98);
+}

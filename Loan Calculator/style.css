@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+:root{
+  --white:#fff;
+  --black:#000;
+  --primary-light: #f9fafb;
+  --second-light:#f0f0f0;
+  --third-light:#DADBDB;
+
+  --primary-grey:#777;
+  --second-grey:#4f4f4f;
+  
+  --dark-shadow: rgba(0,0,0,0.1);
+  --light-shadow: rgba(255,255,255,0.1);
+
+  --success: rgba(61, 168, 102, 0.6);
+  --error: rgba(168, 30, 14, 0.6);
+
+  --first-color:#4c8061;
+
+  --shadow-color: 180deg 1% 49%;
+  --shadow-elevation-medium:
+    0px 0.6px 0.8px hsl(var(--shadow-color) / 0.25),
+    0px 2.3px 2.9px -0.5px hsl(var(--shadow-color) / 0.33),
+    0px 5.3px 6.8px -1px hsl(var(--shadow-color) / 0.42),
+    -0.1px 12px 15.3px -1.5px hsl(var(--shadow-color) / 0.5);
+
+    --shadow-elevation-high:
+    0px 0.1px 0.1px hsl(var(--shadow-color) / 0.32),
+    0px 0.7px 0.9px -0.2px hsl(var(--shadow-color) / 0.38),
+    -0.1px 1.4px 1.8px -0.5px hsl(var(--shadow-color) / 0.45),
+    -0.1px 2.2px 2.8px -0.7px hsl(var(--shadow-color) / 0.51),
+    -0.2px 3.5px 4.5px -1px hsl(var(--shadow-color) / 0.58),
+    -0.3px 5.5px 7.1px -1.2px hsl(var(--shadow-color) / 0.64),
+    -0.5px 8.4px 10.8px -1.4px hsl(var(--shadow-color) / 0.71);
+
+}
+
+/* GLOBAL CONFIG RESET */
+* {
+box-sizing: border-box;
+font-size: 1rem;
+margin: 0;
+padding: 0;
+}
+
+/* BODY DISPLAY */
+body {
+font-family: 'Righteous', sans-serif;
+background: var(--primary-light);
+color: hsl(var(--shadow-color));
+overflow: hidden;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+text-align: center;
+
+height: 100vh;
+
+}
+
+.container{
+  z-index: 2;
+  width: 30vw;
+  height: 30vh;
+  border: 2px solid var(--dark-shadow);
+  padding: 1rem 2rem;
+  background-color: none;
+  border-radius: 1rem;
+  position: relative;
+
+  flex-direction: row;
+  display: flex;
+}
+
+.background-container{
+  border-radius: 1rem;
+  background: transparent;
+  filter: blur(0px);
+  z-index: 0;
+  position: absolute;
+  width: 30vw;
+  height: 30vh;
+  box-shadow: var(--shadow-elevation-high);
+}
+
+h1{
+  position: absolute;
+  margin-top: 5%;
+  top: 0;
+  font-size: 6rem;
+  /* color: var(--primary-light); */
+  -webkit-text-stroke: 0.1px hsl(var(--shadow-color));
+}
+
+h2{
+  position: absolute; 
+  bottom: 10%; 
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  /* width: 400px;  */
+  font-size: 1.5rem;
+}
+
+.calculator-container{
+  position: absolute;
+  left: 0; 
+  right: 0; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 100%;
+}
+
+.text-container{
+  width: 50%;
+}
+
+.option{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 2% 0;
+}
+
+.option input{
+  text-align: center;
+  width: 20%;
+  color: var(--black);
+  background-color: transparent;
+  font-family: inherit;
+  border: 0;
+  border-bottom: 2px solid hsl(var(--shadow-color));
+  margin: 0 2%;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+  cursor: none;
+}
+
+input:focus{
+  outline: none;
+}
+
+.result{
+  color: var(--black);
+  font-size: inherit;
+}
