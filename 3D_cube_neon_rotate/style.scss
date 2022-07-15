@@ -15,13 +15,15 @@ $primary-grey:#777;
 $second-grey:#4f4f4f;
 
 $first-shadow: rgba(0,0,0,0.3);
+$first-white-shadow: rgba(255,255,255,0.2);
 
 $success: rgba(61, 168, 102, 0.6);
 $error: rgba(168, 30, 14, 0.6);
 
 $primary-green:#00ec00;
 
-$gradient1: linear-gradient($second-dark, $primary-green);
+$gradient1: linear-gradient($second-dark 94%,$primary-green 130%);
+$gradient2: linear-gradient($second-dark 2%,$primary-green 180%);
 
 /* GLOBAL CONFIG RESET */
 * {
@@ -53,53 +55,70 @@ perspective: 1000;
 
 /* -------- CLASS --------- */
 
+.containerCube{
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .cube{
+  margin: 1em 8em;
   position: relative;
-  width: 300px;
-  height: 300px;
+  width: 308px;
+  height: 308px;
   transform-style: preserve-3d;
   transform: rotateX(-30deg);
   animation: rotateCube 4s linear infinite;
 
-  .lateral{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform-style: preserve-3d;
-
-    span{
+    .lateral{
       position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       height: 100%;
-      background: $gradient1;
-      filter: blur(4px);
-      // transform: rotateY(calc(90deg * $i));
-
-      &:nth-child(1){
-        // $i:1;
-        transform: rotateY(calc(90deg * 1)) translateZ(150px);
-      }
-      &:nth-child(2){
-        // $i:2;
-        transform: rotateY(calc(90deg * 2)) translateZ(150px);
-      }
-      &:nth-child(3){
-        // $i:3;
-        transform: rotateY(calc(90deg * 3)) translateZ(150px);
-      }
-      &:nth-child(4){
-        // $i:4;
-        transform: rotateY(calc(90deg * 4)) translateZ(150px);
-      }
+      transform-style: preserve-3d;
       
-
-    }
-  }
   
+      span{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: $gradient1;
+              background:url('https://svgshare.com/i/j72.svg'), $gradient1;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 100%;
+        filter: blur(1px);
+        // transform: rotateY(calc(90deg * $i));
+  
+        &:nth-child(1){
+          // $i:1;
+          transform: rotateY(calc(90deg * 1)) translateZ(150px);
+        }
+        &:nth-child(2){
+          // $i:2;
+          transform: rotateY(calc(90deg * 2)) translateZ(150px);
+        }
+        &:nth-child(3){
+          // $i:3;
+          transform: rotateY(calc(90deg * 3)) translateZ(150px);
+        }
+        &:nth-child(4){
+          // $i:4;
+          transform: rotateY(calc(90deg * 4)) translateZ(150px);
+        }
+        
+  
+      }
+    
+
+  }
+
   .top{
     position: absolute;
     top: 0;
@@ -138,7 +157,7 @@ perspective: 1000;
       // transform-style: preserve-3d;
       background-color: rgba(0, 255, 0, 0.5);
       transform: translateZ(-350px);
-      filter: blur(30px);
+      filter: blur(20px);
       box-shadow: 
         0 0 220px rgba(0,255,0,0.1),
         0 0 300px rgba(0,255,0,0.2),
