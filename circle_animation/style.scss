@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap');
+
+$font1: 'Poppins', sans-serif;
+$font2: 'Lobster Two', cursive;
+$white:#fff;
+$black:#000;
+$primary-light: #f9fafb;
+$second-light:#f0f0f0;
+$third-light:#DADBDB;
+
+$primary-dark:#222;
+$second-dark:#2a2a2a;
+$third-dark:rgba(25, 25, 25, 0.2);
+
+$primary-grey:#777;
+$second-grey:#4f4f4f;
+
+$first-shadow: rgba(0,0,0,0.3);
+
+$success: rgba(61, 168, 102, 0.6);
+$error: rgba(168, 30, 14, 0.6);
+
+$primary-color:#4c8061;
+
+/* GLOBAL CONFIG RESET */
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+select:focus, input:focus, button:focus{
+  outline:none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+background-color: $primary-dark;
+// overflow: hidden;
+
+display: flex;
+  justify-content: center;
+  align-items: center;
+// flex-direction: column;
+
+min-height: 100vh;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+/* -------- CLASS --------- */
+
+.loader{
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: $second-dark;
+  border-radius: 30%;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+  box-shadow: 
+    0 5px 10px $third-dark,
+    0 1px 10px $second-grey;
+
+  .circle{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    // border: 2px solid $third-dark;
+    border-radius: 50%;
+    animation: animateCircle 1.5s linear infinite;
+    box-shadow: 
+    0 0 20px -5px var(--clr),
+    inset 0 0 20px -5px var(--clr),
+    0 0 60px -5px var(--clr);
+
+    &:nth-child(2){
+      width: 200px;
+      height: 200px;
+      animation: animateCircle 1.25s linear infinite;
+    }
+
+    &:nth-child(3){
+      width: 100px;
+      height: 100px;
+      animation: animateCircle 1s linear infinite;
+    }
+
+    &::before{
+      content: '';
+      position: absolute;
+        top: -12px;
+        left: 50%;
+      width: 20px;
+      height: 20px;
+      transform: translateX(-50%);
+      // background: var(--clr);
+      background: $second-dark;
+      border: 2px solid var(--clr);
+      border-radius: 50%;
+      box-shadow: 
+        0 0 20px var(--clr),
+        0 0 60px var(--clr);
+    }
+  }
+
+}
+
+@keyframes animateCircle {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+/* -------- PSEUDO CLASS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+  
+}
