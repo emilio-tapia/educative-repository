@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap");
+/* GLOBAL CONFIG RESET */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+select:focus, input:focus, button:focus {
+  outline: none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background: #111;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+h2 {
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  font-weight: 300;
+  font-size: 1vw;
+}
+
+input[type='checkbox'], input[type='radio'] {
+  position: relative;
+  width: 120px;
+  height: 40px;
+  margin: 10px;
+  outline: none;
+  background: #111;
+  -webkit-appearance: none;
+  cursor: pointer;
+  border-radius: 20px;
+  -webkit-box-shadow: -5px -5px 20px rgba(255, 255, 255, 0.2), 5px 5px 10px black, inset -2px -2px 5px rgba(255, 255, 255, 0.2), inset 2px 2px 5px black, 0 0 0 2px #1f1f1f;
+          box-shadow: -5px -5px 20px rgba(255, 255, 255, 0.2), 5px 5px 10px black, inset -2px -2px 5px rgba(255, 255, 255, 0.2), inset 2px 2px 5px black, 0 0 0 2px #1f1f1f;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+input[type='checkbox']:checked, input[type='radio']:checked {
+  background: #20b7ff;
+  -webkit-box-shadow: -5px -5px 20px rgba(255, 255, 255, 0.2), 5px 5px 10px black, inset -2px -2px 5px rgba(255, 255, 255, 0.2), inset 2px 2px 5px black, 0 0 0 2px #1f1f1f, -5px -5px 120px #20b7ff;
+          box-shadow: -5px -5px 20px rgba(255, 255, 255, 0.2), 5px 5px 10px black, inset -2px -2px 5px rgba(255, 255, 255, 0.2), inset 2px 2px 5px black, 0 0 0 2px #1f1f1f, -5px -5px 120px #20b7ff;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+input[type='checkbox']::before, input[type='radio']::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 40px;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000), to(#555));
+  background: linear-gradient(to top, #000, #555);
+  border-radius: 20px;
+  -webkit-box-shadow: inset -2px -1px 4px rgba(255, 255, 255, 0.2), inset 2px 2px 4px black, 0 0 0 0px #252525f8;
+          box-shadow: inset -2px -1px 4px rgba(255, 255, 255, 0.2), inset 2px 2px 4px black, 0 0 0 0px #252525f8;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+
+input[type='checkbox']:checked::before, input[type='radio']:checked::before {
+  left: 40px;
+  -webkit-box-shadow: inset 2px 0px 4px 3px rgba(255, 255, 255, 0.2), inset -2px 1px 4px black, 0 0 10px 0px #252525f8;
+          box-shadow: inset 2px 0px 4px 3px rgba(255, 255, 255, 0.2), inset -2px 1px 4px black, 0 0 10px 0px #252525f8;
+}
+
+input[type='checkbox']::after, input[type='radio']::after {
+  content: '';
+  position: absolute;
+  left: 65px;
+  top: calc(50% - 2px);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  background: #555;
+  -webkit-box-shadow: -10px 0px 0.5px -1.5px #4f4f4f, -10px 0px 10px -2px #4f4f4f, -20px 0px 0.5px -1.5px #555, -20px 0px 10px -2px #555, 0 0 5px transparent, 0 0 15px transparent, 0 0 30px transparent;
+          box-shadow: -10px 0px 0.5px -1.5px #4f4f4f, -10px 0px 10px -2px #4f4f4f, -20px 0px 0.5px -1.5px #555, -20px 0px 10px -2px #555, 0 0 5px transparent, 0 0 15px transparent, 0 0 30px transparent;
+}
+
+input[type='checkbox']:checked::after, input[type='radio']:checked::after {
+  left: calc(65px + 40px);
+  background: #63cdff;
+  -webkit-box-shadow: -10px 0px 0.5px -1.5px #63cdff, -10px 0px 2px -1.5px #63cdff, -20px 0px 0.5px -1.5px #63cdff, -20px 0px 2px -1.5px #63cdff, 0 0 5px #63cdff, 0 0 15px #63cdff, 0 0 30px #63cdff;
+          box-shadow: -10px 0px 0.5px -1.5px #63cdff, -10px 0px 2px -1.5px #63cdff, -20px 0px 0.5px -1.5px #63cdff, -20px 0px 2px -1.5px #63cdff, 0 0 5px #63cdff, 0 0 15px #63cdff, 0 0 30px #63cdff;
+}
+
+/* -------- TYPE SELECTORS --------- */
+/* -------- CLASS --------- */
+/* -------- PSEUDO CLASS --------- */
+/* -------- MEDIA QUERY --------- */
+/*# sourceMappingURL=style.css.map */

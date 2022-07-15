@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap');
+
+$font1: 'Poppins', sans-serif;
+$font2: 'Lobster Two', cursive;
+$white:#fff;
+$black:#000;
+$primary-light: #f9fafb;
+$second-light:#f0f0f0;
+$third-light:#DADBDB;
+
+$primary-dark:#111;
+$second-dark:#222;
+$third-dark:#1f1f1f;
+$fourth-dark:#252525f8;
+
+$primary-grey:#555;
+$second-grey:#4f4f4f;
+$third-grey:#5f5f5f;
+
+$first-shadow: rgba(0,0,0,1);
+$second-shadow: rgba(255,255,255,0.2);
+
+$success: rgba(61, 168, 102, 0.6);
+$error: rgba(168, 30, 14, 0.6);
+
+$primary-blue:#20b7ff;
+$second-blue:#63cdff;
+
+/* GLOBAL CONFIG RESET */
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+select:focus, input:focus, button:focus{
+  outline:none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+background: $primary-dark;
+// overflow: hidden;
+
+display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+min-height: 100vh;
+
+}
+
+h2{
+  font-family: $font1;
+  color: $white;
+  font-weight: 300;
+  font-size: 1vw;
+}
+
+input{
+
+  &[type='checkbox'], 
+  &[type='radio']{
+    position: relative;
+    width: 120px;
+    height: 40px;
+    margin: 10px;
+    outline: none;
+    background: $primary-dark;
+    -webkit-appearance: none;
+    cursor: pointer;
+    border-radius: 20px;
+    box-shadow: 
+      -5px -5px 20px $second-shadow,
+      5px 5px 10px $first-shadow,
+      inset -2px -2px 5px $second-shadow,
+      inset 2px 2px 5px $first-shadow,
+      0 0 0 2px $third-dark;
+    transition-duration: 0.5s;
+
+    &:checked{
+      background: $primary-blue;
+      box-shadow: 
+      -5px -5px 20px $second-shadow,
+      5px 5px 10px $first-shadow,
+      inset -2px -2px 5px $second-shadow,
+      inset 2px 2px 5px $first-shadow,
+      0 0 0 2px $third-dark,
+      -5px -5px 120px $primary-blue;
+      transition-duration: 0.5s;
+      
+    }
+
+    &::before{
+      content: '';
+      position: absolute;
+        top: 0;
+        left: 0;
+      width: 80px;
+      height: 40px;
+      background: linear-gradient(to top, $black, $primary-grey);
+      border-radius: 20px;
+      box-shadow: 
+      inset -2px -1px 4px $second-shadow,
+      inset 2px 2px 4px $first-shadow,
+      0 0 0 0px $fourth-dark;
+      // transform: scale(1, 1);
+      transition-duration: 0.5s;
+      
+    }
+
+    &:checked::before{
+      left: 40px;
+      box-shadow: 
+      inset 2px 0px 4px 3px $second-shadow,
+      inset -2px 1px 4px $first-shadow,
+      0 0 10px 0px $fourth-dark;
+    }
+
+    &::after{
+      content: '';
+      position: absolute;
+        left: 65px;
+        top: calc(50% - 2px);
+      width: 4px;
+      height: 4px;
+      border-radius: 50%;
+      transition-duration: 0.5s;
+      background: $primary-grey;
+      box-shadow: 
+      -10px 0px 0.5px -1.5px $second-grey,
+      -10px 0px 10px -2px $second-grey,
+      -20px 0px 0.5px -1.5px $primary-grey,
+      -20px 0px 10px -2px $primary-grey,
+      
+      0 0 5px transparent,
+      0 0 15px transparent,
+      0 0 30px transparent;
+    }
+
+    &:checked::after{
+      left: calc(65px + 40px);
+      background: $second-blue;
+      box-shadow: 
+      -10px 0px 0.5px -1.5px $second-blue,
+      -10px 0px 2px -1.5px $second-blue,
+      -20px 0px 0.5px -1.5px $second-blue,
+      -20px 0px 2px -1.5px $second-blue,
+      0 0 5px $second-blue,
+      0 0 15px $second-blue,
+      0 0 30px $second-blue;
+    }
+  }
+
+}
+
+
+
+/* -------- TYPE SELECTORS --------- */
+
+/* -------- CLASS --------- */
+
+/* -------- PSEUDO CLASS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+  
+}
