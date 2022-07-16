@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap');
+
+$font1: 'Poppins', sans-serif;
+$font2: 'Lobster Two', cursive;
+$white:#fff;
+$black:#000;
+$primary-light: #f9fafb;
+$second-light:#f0f0f0;
+$third-light:#DADBDB;
+
+$primary-dark:#232323;
+$second-dark:#282828;
+$third-dark:#202020;
+$primary-grey:#4a4a4a;
+$second-grey:#9a9a9a;
+
+$first-shadow: rgba(0,0,0,0.75);
+
+$success: rgba(61, 168, 102, 0.6);
+$error: rgba(168, 30, 14, 0.6);
+
+$primary-color:#4c8061;
+$gradient1: linear-gradient(180deg, $second-dark, $third-dark);
+$gradient2: linear-gradient(90deg, $primary-dark, $primary-grey);
+
+/* GLOBAL CONFIG RESET */
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+font-family: $font1;
+font-weight: 500;
+}
+
+select:focus, input:focus, button:focus{
+  outline:none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+background-color: $second-grey;
+// overflow: hidden;
+
+display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+min-height: 100vh;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+span{
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  padding: 8px 15px;
+  margin: 10px 5px;
+  border-radius: 10px;
+  background: $gradient1;
+  box-shadow: 
+  inset -8px 0 8px rgba(0,0,0,0.15),
+  inset 0px -8px 8px rgba(0,0,0,0.25),
+  0 0 0 2px $first-shadow,
+  5px 10px 25px $first-shadow;
+  overflow: hidden;
+  transition: 0.16s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  
+
+  i{
+    position: relative;
+    color: $white;
+    font-style: normal;
+    font-size: 1.25em;
+    &::selection {
+      background-color: none;
+      color: $white;
+    }
+    
+  }
+
+  &:active{
+    box-shadow: 
+    inset -1px 0 8px rgba(0,0,0,0.15),
+    inset 0px -1px 8px rgba(0,0,0,0.25),
+    0 0 0 2px $first-shadow,
+    5px 5px 25px $first-shadow;
+    padding: 8.1px 16.5px;
+  }
+
+  &:last-child{
+    width: 100%;
+  }
+
+  &::before{
+    content: '';
+    position: absolute;
+      top: 3px;
+      left: 4px;
+      bottom: 14px;
+      right: 12px;
+    background: $gradient2;
+    border-radius: 10px;
+    box-shadow: 
+    -10px -10px 10px rgba(255,255,255,0.25),
+    10px 5px 10px rgba(0,0,0,0.15);
+    border-left: 1px solid #0004;
+    border-bottom: 1px solid #0004;
+    border-top: 1px solid #0009;
+  }
+
+  &:active::before{
+      top: 3px;
+      left: 6px;
+      bottom: 10px;
+      right: 10px;
+
+      box-shadow: 
+      -1px -1px 10px rgba(255,255,255,0.25),
+      2px 1px 10px rgba(0,0,0,0.15);
+  }
+}
+
+/* -------- CLASS --------- */
+
+/* -------- PSEUDO CLASS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+  
+}

@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap");
+/* GLOBAL CONFIG RESET */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+select:focus, input:focus, button:focus {
+  outline: none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: #9a9a9a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+/* -------- TYPE SELECTORS --------- */
+span {
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  padding: 8px 15px;
+  margin: 10px 5px;
+  border-radius: 10px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#282828), to(#202020));
+  background: linear-gradient(180deg, #282828, #202020);
+  -webkit-box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0px -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75), 5px 10px 25px rgba(0, 0, 0, 0.75);
+          box-shadow: inset -8px 0 8px rgba(0, 0, 0, 0.15), inset 0px -8px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75), 5px 10px 25px rgba(0, 0, 0, 0.75);
+  overflow: hidden;
+  -webkit-transition: 0.16s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: 0.16s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+span i {
+  position: relative;
+  color: #fff;
+  font-style: normal;
+  font-size: 1.25em;
+}
+
+span i::-moz-selection {
+  background-color: none;
+  color: #fff;
+}
+
+span i::selection {
+  background-color: none;
+  color: #fff;
+}
+
+span:active {
+  -webkit-box-shadow: inset -1px 0 8px rgba(0, 0, 0, 0.15), inset 0px -1px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75), 5px 5px 25px rgba(0, 0, 0, 0.75);
+          box-shadow: inset -1px 0 8px rgba(0, 0, 0, 0.15), inset 0px -1px 8px rgba(0, 0, 0, 0.25), 0 0 0 2px rgba(0, 0, 0, 0.75), 5px 5px 25px rgba(0, 0, 0, 0.75);
+  padding: 8.1px 16.5px;
+}
+
+span:last-child {
+  width: 100%;
+}
+
+span::before {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 4px;
+  bottom: 14px;
+  right: 12px;
+  background: -webkit-gradient(linear, left top, right top, from(#232323), to(#4a4a4a));
+  background: linear-gradient(90deg, #232323, #4a4a4a);
+  border-radius: 10px;
+  -webkit-box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.25), 10px 5px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: -10px -10px 10px rgba(255, 255, 255, 0.25), 10px 5px 10px rgba(0, 0, 0, 0.15);
+  border-left: 1px solid #0004;
+  border-bottom: 1px solid #0004;
+  border-top: 1px solid #0009;
+}
+
+span:active::before {
+  top: 3px;
+  left: 6px;
+  bottom: 10px;
+  right: 10px;
+  -webkit-box-shadow: -1px -1px 10px rgba(255, 255, 255, 0.25), 2px 1px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: -1px -1px 10px rgba(255, 255, 255, 0.25), 2px 1px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* -------- CLASS --------- */
+/* -------- PSEUDO CLASS --------- */
+/* -------- MEDIA QUERY --------- */
+/*# sourceMappingURL=style.css.map */
