@@ -1,0 +1,114 @@
+@import 'helpers';
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include reset();
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: $primary-red;
+  // overflow: hidden;
+
+  // @include flexDisplay(center, center, column, wrap)
+
+  // height: 100vh;
+  &::before,
+  &::after{
+  content: '';
+  @include absoluteInit_top-left(0, 0);
+  @include width-height(100%, 100%);
+  
+  background: radial-gradient(
+    
+    $primary-dark 0%,
+    $second-red 120%);
+    animation: animateBack 7s ease-in-out infinite;
+  }
+
+  &::after{
+    filter: url(#noise);
+    background: radial-gradient(
+      transparent 0%,
+      $primary-dark 120%);
+  }
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+section {
+  @include flexDisplay(center, center, column, wrap);
+  min-height: 100vh;
+
+  .loader {
+    @include relativeInit_width-height(250px, 250px);
+    filter: url(#gooey);
+    animation: animateLiquid 3s linear infinite reverse;
+
+    span {
+      @include absoluteInit_top-left(0, 0);
+      @include width-height(100%, 100%);
+      display: block;
+      transform: rotate(calc(45deg * var(--i)));
+
+      &::before{
+        content: '';
+        @include absoluteInit_top-left(0, calc(50% - 20px));
+        @include width-height(40px, 40px);
+        
+        background: linear-gradient(45deg, $primary-light, $second-blue);
+        border-radius: 50%;
+        box-shadow: 0 0 30px $primary-blue;
+      }
+
+      &.rotate{
+        animation: animateLiquid 4s ease-in-out infinite;
+        animation-delay: calc(-0.2s * var(--j));
+      }
+    }
+  }
+}
+
+svg{
+  width: 0;
+  height: 0;
+}
+
+/* -------- CLASS & ID --------- */
+
+
+/* -------- ANIMATIONS --------- */
+
+@keyframes animateLiquid {
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animateBack {
+  0%{
+    opacity: 1;
+    filter: saturate(0);
+  }
+  50%{
+    opacity: 0.5;
+    filter: saturate(0.6);
+  }
+  100%{
+    opacity: 1;
+    filter: saturate(0);
+  }
+}
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {}
