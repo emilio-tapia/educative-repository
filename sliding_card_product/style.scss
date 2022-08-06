@@ -1,0 +1,193 @@
+@import 'helpers';
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include reset();
+}
+
+select:focus, input:focus, button:focus{
+  outline:none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+background-color: $primary-gradient;
+// overflow: hidden;
+
+@include flexDisplay(center, center, column, wrap);
+
+min-height: 100vh;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+/* -------- CLASS & ID --------- */
+
+.card{
+  @include relativeInit_width-height(300px, 380px);
+  @include flexDisplay(flex-start, center, column, wrap);
+  background: $black;
+  box-shadow: 
+  0 15px 45px $first-dark-shadow,
+  0 10px 65px $first-dark-shadow;
+  overflow: hidden;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  border-radius: 16px;
+
+  &:hover{
+    @include relativeInit_width-height(600px, 380px);
+
+    .imgBox{
+      img{
+        transform: scale(1.2) translateY(-8px);
+      }
+    }
+  }
+
+  .imgBox{
+    
+    @include relativeInit_width-height(300px, 100%); 
+    
+    @include flexDisplay(center, center, column, wrap);
+    background: $white;
+    z-index: 2;
+    overflow: hidden;
+
+    img{
+      max-width: 250px;
+      transition-duration: 0.5s;
+      transition-timing-function: ease-in-out;
+    }
+  }
+
+  .details{
+    // @include relativeInit_width-height(300px, 100%);
+    // @include absoluteInit_top-left(0, 0);
+    position: absolute;
+    right: 0;
+    
+    // @include relativeInit_width-height(300px, 100%); 
+    // min-width: 100px;
+    height: 100%;
+    background: $primary-blue;
+    @include flexDisplay(flex-start, center, column, wrap);
+    padding: 20px;
+    z-index: 1;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+
+    &::before{
+      content: '';
+      @include absoluteInit_top-left(50%, 0);
+      @include width-height(0, 0);
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid $white;
+    }
+
+    h3{
+      color: $white;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 1.5em;
+      line-height: 1em;
+
+      span{
+        font-weight: 300;
+        font-size: 0.65em;
+        text-transform: none;
+        opacity: 0.85;
+      }
+    }
+
+    h4{
+      color: $white;
+      text-transform: uppercase;
+      font-weight: 600;
+      font-size: 0.9em;
+      line-height: 1em;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    p{
+      color: $white;
+      font-size: 0.8em;
+      opacity: 0.85;
+    }
+
+    .size{
+      @include flexDisplay(center, center, row, wrap);
+      gap: 10px;
+
+      li{
+        color: $white;
+        list-style: none;
+        @include width-height(40px, 40px);
+        border: 2px solid $white;
+        font-size: 0.9em;
+        @include flexDisplay(center, center, column, wrap);
+        font-weight: 500;
+        opacity: 0.65;
+        cursor: pointer;
+
+        &:hover{
+          color: $primary-blue;
+          background: $white;
+          opacity: 1;
+        }
+      }
+    }
+
+    .group{
+      position: relative;
+      @include flexDisplay(center, space-between, row, wrap);
+      margin-top: 20px;
+      width: 100%;
+
+      h2{
+        color: $white;
+        font-weight: 600;
+        font-size: 2em;
+
+        sup{
+          font-weight: 300;
+        }
+
+        small{
+          font-size: 0.75em;
+        }
+      }
+
+      a{
+        display: inline-flex;
+        padding: 12px 24px;
+        background: $white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 500;
+        color: $primary-blue;
+        border-radius: 8px;
+        transition-duration: 0.5s;
+        transition-timing-function: ease-in-out;
+
+        &:hover{
+          background: $primary-grey;
+          // border: 2px solid $white;
+          color: $white;
+          transition-duration: 0.5s;
+          transition-timing-function: ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+/* -------- ANIMATIONS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+  
+}

@@ -1,0 +1,64 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap");
+/* GLOBAL CONFIG RESET */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+select:focus, input:focus, button:focus {
+  outline: none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: #f9fafb;
+}
+
+/* -------- TYPE SELECTORS --------- */
+section {
+  height: 100vh;
+  overflow: hidden;
+  background: #000;
+}
+
+section p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0.99em;
+  letter-spacing: -0.02em;
+  line-height: 0.8em;
+  background: url(./face.png), url(./face.png);
+  background-position-x: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: contain;
+  -webkit-filter: grayscale(0.6);
+          filter: grayscale(0.6);
+  color: transparent;
+  -webkit-transform: translateY(5vh) translateX(-2.5vw);
+          transform: translateY(5vh) translateX(-2.5vw);
+}
+
+section p:first-child {
+  -webkit-clip-path: inset(0 30% 0 55%);
+          clip-path: inset(0 30% 0 55%);
+}
+
+section p:last-child {
+  -webkit-background-clip: text;
+  background-blend-mode: color-dodge;
+  color: transparent;
+  -webkit-clip-path: inset(0 45% 0 30%);
+          clip-path: inset(0 45% 0 30%);
+  z-index: 2;
+}
+
+/* -------- CLASS & ID --------- */
+/* -------- PSEUDO CLASS --------- */
+/* -------- ANIMATIONS --------- */
+/* -------- MEDIA QUERY --------- */
+/*# sourceMappingURL=style.css.map */

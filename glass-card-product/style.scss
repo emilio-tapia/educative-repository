@@ -1,0 +1,194 @@
+@import 'helpers';
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include reset();
+}
+
+select:focus, input:focus, button:focus{
+  outline:none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+// background-color: $primary-dark;
+// overflow: hidden;
+
+// @include flexDisplay(center, center, column, wrap);
+
+min-height: 100vh;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+section{
+  background-color: $primary-dark;
+overflow: hidden;
+
+@include flexDisplay(center, center, column, wrap);
+padding: 100px 20px;
+min-height: 100vh;
+
+  &::before{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include w-h(100%, 100%);
+    background: $primary-red;
+    clip-path: circle(65% at 100% -20%);
+  } 
+  &::after{
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    @include w-h(100%, 100%);
+    background: $primary-blue;
+    clip-path: circle(35% at 0% 100%);
+  } 
+
+  .container{
+    position: relative;
+    z-index: 10;
+    @include flexDisplay(center, center, row, wrap);
+
+    .card{
+      @include relativeInit_w-h(300px, 100%);
+      margin: 20px 40px;
+      @include flexDisplay(center, center, column, wrap);
+      background: $first-white-shadow;
+      box-shadow: 0 10px 25px $first-dark-shadow;
+      backdrop-filter: blur(15px);
+
+      &:hover{
+        .imgBox{
+          transform: translateY(-150px);
+
+          img{
+            transform: translate(-20px, -10px) rotate(-25deg) scale(1.1);
+          }
+        }
+
+        .content{
+          opacity: 1;
+          visibility: visible;
+          transform: translateY(-50px);
+          transition-delay: 0.1s;
+        }
+      }
+
+      .imgBox{
+        position: relative;
+        @include flexDisplay(center, center, column, wrap);
+        padding: 10px;
+        transition: 0.4s ease-in-out;
+        
+        img{
+          max-width: 100%;
+          margin: 0 0 20px;
+          transition: 0.5s ease-in-out;
+        }
+
+        h2{
+          color: $white;
+          font-weight: 600;
+          transform: translateY(-30px);
+          font-size: 2rem;
+        }
+      }
+
+      .content{
+        position: absolute;
+        bottom: 0px;
+        transition: 0.3s ease-in-out;
+        transition-delay: 0s;
+        @include flexDisplay(center, center, column, wrap);
+        opacity: 0;
+        visibility: hidden;
+
+        .size,
+        .color{
+          @include flexDisplay(center, center, row, wrap);
+          padding: 8px 20px;
+
+          h3{
+            color: $white;
+            font-weight: 300;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-right: 10px;
+          }
+        }
+
+        .size{
+          span{
+            @include w-h(26px, 26px);
+            text-align: center;
+            line-height: 24px;
+            display: inline-block;
+            color: $second-dark;
+            background: $white;
+            border-radius: 4px;
+            font-size: 14px;
+            margin: 0 5px;
+            font-weight: 500;
+            transition-duration: 0.5s;
+            cursor: pointer;
+
+            &:hover{
+              background: $primary-green;
+            }
+          }
+        }
+        .color{
+          span{
+            @include w-h(20px, 20px);
+            background: $second-red;
+            border-radius: 50%;
+            margin: 0 5px;
+            border: 2px solid $white;
+            box-sizing: border-box;
+            transition-duration: 0.5s;
+            cursor: pointer;
+
+            &:nth-child(2){
+              background: $primary-green;
+            }
+            &:nth-child(3){
+              background: $primary-blue;
+            }
+            &:nth-child(4){
+              background: $primary-red;
+            }
+          }
+        }
+
+        a{
+          position: relative;
+          top: 20px;
+          display: inline-block;
+          padding: 11px 30px;
+          background: $white;
+          border-radius: 40px;
+          font-weight: 600;
+          letter-spacing: 1px;
+          color: $second-dark;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+/* -------- CLASS & ID --------- */
+
+/* -------- ANIMATIONS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+  
+}

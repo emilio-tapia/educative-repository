@@ -1,0 +1,212 @@
+@import 'helpers';
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include reset();
+}
+
+select:focus, input:focus, button:focus{
+  outline:none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+background-color: $primary-grey;
+// overflow: hidden;
+
+@include flexDisplay(center, center, column, wrap);
+
+height: 100vh;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+/* -------- CLASS & ID --------- */
+
+.navigation{
+  @include flexDisplay(flex-start, center, column, wrap);
+  width: 80px;
+  // min-height: 400px;
+  background: #eee;
+  border-radius: 10px;
+  box-shadow: 
+  inset 0 1px 8px $first-purple-shadow,
+  0px 20px 50px $first-purple-shadow;
+  border: 0.5px solid $first-purple-shadow;
+  transition-duration: 0.5s;
+  overflow: hidden;
+
+
+  &.active{
+    width: 250px;
+
+    .profile{
+  
+      .imgBox{
+        width: 200px;
+        height: 200px;
+        border: 1px solid $first-purple-shadow;
+        box-shadow: 
+        inset 0 1px 8px $first-purple-shadow,
+        0px 20px 50px $first-purple-shadow;
+      }
+    }
+
+    .menu_toggle{
+      border-bottom: 0.75px solid $first-purple-shadow;
+
+      &:hover{
+    
+        &::after{
+          box-shadow: 0 0px $white;
+        }
+      }
+
+      &::before{
+        transform: translateY(0px) translateX(22px) rotate(45deg) ;
+      }
+      &::after{
+        transform: translateY(0px) translateX(22px) rotate(-45deg) ;
+        box-shadow: 0 0px transparent;
+        
+      }
+    }
+
+    .menu{
+      border-top: 0.5px solid $first-purple-shadow;
+
+      li{
+        padding: 8px 16px;
+        a{
+          .text{
+            margin-left: 4px;
+          }
+        }
+      }
+    }
+  }
+
+  .menu_toggle{
+    position: relative;
+    height: 70px;
+    @include flexDisplay(flex-start, center, column, wrap);
+    cursor: pointer;
+    width: 100%;
+    border-bottom: 1px solid $first-purple-shadow;
+    transition-duration: 0.3s;
+
+    &:hover{
+      background: $primary-purple;
+
+      &::before{
+        background: $white;
+      }
+  
+      &::after{
+        background: $white;
+        box-shadow: 0 -10px $white;
+      }
+    }
+    
+
+
+
+    &::before{
+      content: '';
+      position: absolute;
+      width: 35px;
+      height: 2px;
+      background: $primary-purple;
+      transform: translateY(-10px) translateX(22px);
+      transition-duration: 0.5s;
+    }
+
+    &::after{
+      content: '';
+      position: absolute;
+      width: 35px;
+      height: 2px;
+      background: $primary-dark;
+      transform: translateY(10px) translateX(22px);
+      transition-duration: 0.5s;
+      box-shadow: 0 -10px $primary-dark;
+    }
+  }
+
+  .profile{
+    @include flexDisplay(center, center, column, wrap);
+    position: relative;
+    margin: 10px 0;
+    // padding: 0 10px;
+    width: 100%;
+
+    .imgBox{
+      position: relative;
+      width: 60px;
+      height: 60px;
+      overflow: hidden;
+      border-radius: 50%;
+      transition-duration: 0.5s;
+      border: 3px solid transparent;
+      box-shadow: 
+      inset 0 1px 8px transparent,
+      0px 20px 50px transparent;
+
+      img{
+        @include absoluteInit_top-left(0, 0);
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  
+  .menu{
+    position: relative;
+    width: 100%;
+    text-align: center;
+    transition-duration: 0.5s;
+    border-top: 0.5px solid $first-dark-shadow;
+    padding: 5px 0;
+
+    li{
+      padding: 5px 10px;
+
+      a{
+        position: relative;
+        @include flexDisplay(center, flex-start, row, no-wrap);
+        color: $second-dark;
+        border-radius: 10px;
+        transition-duration: 0.3s;
+
+        &:hover{
+          background: $primary-purple;
+          color: $white;
+        }
+        
+        .icon{
+          position: relative;
+          min-width: 60px;
+          height: 60px;
+          @include flexDisplay(center, center, column, wrap);
+          font-size: 1.75em;
+        }
+        .text{
+          position: relative;
+          height: 10px;
+          @include flexDisplay(center, center, column, wrap);
+          font-size: 1.25em;
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+}
+
+/* -------- ANIMATIONS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+  
+}

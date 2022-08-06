@@ -1,0 +1,72 @@
+@import 'helpers';
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include reset();
+}
+
+select:focus, input:focus, button:focus{
+  outline:none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+background-color: $primary-light;
+// overflow: hidden;
+
+// @include flexDisplay(center, center, column, wrap)
+
+// height: 100vh;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+section{
+  height: 100vh;
+  overflow: hidden;
+  background: $black;
+
+  p{
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.99em;
+    letter-spacing: -0.02em;
+    line-height: 0.8em;
+
+    background: url(./face.png), url(./face.png);
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    filter: grayscale(0.6);
+    
+    color: transparent;
+    transform: translateY(5vh) translateX(-2.5vw);
+
+    &:first-child{
+      clip-path: inset(0 30% 0 55%);
+    }
+
+    &:last-child{
+      -webkit-background-clip: text;
+      background-blend-mode: color-dodge;
+      color: transparent;
+      clip-path: inset(0 45% 0 30%);
+      z-index: 2;
+    }
+
+  }
+}
+
+/* -------- CLASS & ID --------- */
+
+/* -------- PSEUDO CLASS --------- */
+
+/* -------- ANIMATIONS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+  
+}
