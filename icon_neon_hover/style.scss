@@ -1,0 +1,83 @@
+@import 'helpers';
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include reset();
+}
+
+select:focus, input:focus, button:focus{
+  outline:none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+background-color: $primary-dark;
+overflow: hidden;
+
+// @include flexDisplay(center, center, column, wrap)
+
+height: 100vh;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+.containerGlobal{
+  height: 100vh;
+  transform: rotate(10deg) translateX(0px) translateY(-100px) scale(1.2);
+
+  @include flexDisplay(left, center, row, wrap);
+  
+
+  .row{
+    // border: 1px solid black;
+    font-size: 3.5em;
+
+    &:nth-child(even){
+      animation: speed1 calc(40s / var(--i)) infinite linear alternate;
+    }
+
+    &:nth-child(odd){
+      animation: speed1 calc(4s * var(--i)) infinite linear alternate-reverse;
+    }
+
+    span{
+      color: $black;
+      opacity: 0.3;
+      filter: blur(1px);
+      text-shadow: 
+      0 0 10px $primary-green,
+      0 0 20px $primary-green,
+      0 0 40px $primary-green,
+      0 0 80px $primary-green;
+      transition: 6s;
+      user-select: none;
+      
+
+      &:hover{
+        opacity: 1;
+        transition: 0s;
+        filter: blur(0px);
+        color: $primary-green;
+      }
+    }
+  }
+}
+
+/* -------- CLASS & ID --------- */
+
+/* -------- ANIMATIONS --------- */
+
+@keyframes speed1 {
+  0%{
+    transform: translateX(0px);
+  }
+  0%{
+    transform: translateX(-100px);
+  }
+}
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+  
+}

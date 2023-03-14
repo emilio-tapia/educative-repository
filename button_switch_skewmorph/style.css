@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap");
+/* GLOBAL CONFIG RESET */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+select:focus, input:focus, button:focus {
+  outline: none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: #f9fafb;
+  display: grid;
+  place-items: center;
+  background: #26272c;
+  height: 100vh;
+}
+
+/* -------- TYPE SELECTORS --------- */
+.skeuo__switch {
+  display: none;
+}
+.skeuo__button {
+  width: 4rem;
+  background: linear-gradient(90deg, #444650 0%, #101113 100%);
+  padding: 0.75rem 1.25rem 0.75rem 1rem;
+  border-radius: 3rem;
+  box-shadow: inset -2px 0 18px #26272c, inset -14px 0 6px #43454f, inset 4px 0 6px #151629, inset -16px -1px 18px #26272c;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  flex-wrap: initial;
+  transition: 0.318s;
+}
+.skeuo__button:hover {
+  box-shadow: inset -2px 0 18px #26272c, inset -14px 0 6px #43454f, inset 4px 0 6px #151629, inset -16px -1px 18px #26272c, -1px 0px 10px -3px #5cccd9;
+}
+.skeuo__circle {
+  font-size: 19px;
+  color: #5cccd9;
+}
+.skeuo__line {
+  transform: perspective(500px) rotate3d(0, 1, 3, 90deg);
+  font-size: 22px;
+  color: #969;
+}
+
+/* Button animation effects */
+.skeuo__switch:checked ~ .skeuo__button {
+  background: linear-gradient(90deg, #101113 0%, #444650 100%);
+  box-shadow: inset -2px 0 18px #212227, inset -4px 0 6px #151619, inset 14px 0 6px #43454f, inset 16px -1px 18px #26272c;
+  padding: 0.75rem 1rem 0.75rem 1.25rem;
+}
+.skeuo__switch:checked ~ .skeuo__button:hover {
+  box-shadow: inset -2px 0 18px #212227, inset -4px 0 6px #151619, inset 14px 0 6px #43454f, inset 16px -1px 18px #26272c, -1px 0px 10px -3px #969;
+}
+.skeuo__switch:checked ~ .skeuo__button .skeuo__circle {
+  font-size: 20px;
+  transform: perspective(500px) translate(3px, 0px) rotate3d(10, 0, 50, 180deg);
+}
+.skeuo__switch:checked ~ .skeuo__button .skeuo__line {
+  font-size: 20px;
+  transform: rotate(90deg);
+}
+
+i {
+  transition: 0.318s;
+}
+
+div.gradientGray {
+  width: 6rem;
+  background: linear-gradient(90deg, #444650 0%, #101113 100%);
+  padding: 0.75rem 1.25rem 10.75rem 1rem;
+  border-radius: 3rem;
+  box-shadow: inset -2px 0 18px #26272c;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: initial;
+  flex-wrap: initial;
+  transition: 0.2s;
+}
+
+/* -------- CLASS & ID --------- */
+/* -------- ANIMATIONS --------- */
+/* -------- MEDIA QUERY --------- *//*# sourceMappingURL=style.css.map */

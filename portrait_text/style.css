@@ -23,7 +23,6 @@ section {
   overflow: hidden;
   background: #000;
 }
-
 section p {
   position: absolute;
   top: 0;
@@ -36,18 +35,14 @@ section p {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: contain;
-  -webkit-filter: grayscale(0.6);
-          filter: grayscale(0.6);
+  filter: grayscale(0.6);
   color: transparent;
-  -webkit-transform: translateY(5vh) translateX(-2.5vw);
-          transform: translateY(5vh) translateX(-2.5vw);
+  transform: translateY(5vh) translateX(-2.5vw);
 }
-
 section p:first-child {
   -webkit-clip-path: inset(0 30% 0 55%);
           clip-path: inset(0 30% 0 55%);
 }
-
 section p:last-child {
   -webkit-background-clip: text;
   background-blend-mode: color-dodge;
@@ -60,5 +55,4 @@ section p:last-child {
 /* -------- CLASS & ID --------- */
 /* -------- PSEUDO CLASS --------- */
 /* -------- ANIMATIONS --------- */
-/* -------- MEDIA QUERY --------- */
-/*# sourceMappingURL=style.css.map */
+/* -------- MEDIA QUERY --------- *//*# sourceMappingURL=style.css.map */

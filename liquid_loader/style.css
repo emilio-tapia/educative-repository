@@ -16,56 +16,39 @@ button:focus {
 
 /* -------- BODY DISPLAY --------- */
 body {
-  background-color: #484660d4;
+  background-color: rgba(72, 70, 96, 0.831372549);
 }
-
 body::before, body::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(#0c1b21 0%, #4e4e4e9f 120%);
-  -webkit-animation: animateBack 7s ease-in-out infinite;
-          animation: animateBack 7s ease-in-out infinite;
+  background: radial-gradient(#0c1b21 0%, rgba(78, 78, 78, 0.6235294118) 120%);
+  animation: animateBack 7s ease-in-out infinite;
 }
-
 body::after {
-  -webkit-filter: url(#noise);
-          filter: url(#noise);
+  filter: url(#noise);
   background: radial-gradient(transparent 0%, #0c1b21 120%);
 }
 
 /* -------- TYPE SELECTORS --------- */
 section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
   min-height: 100vh;
 }
-
 section .loader {
   position: relative;
   width: 250px;
   height: 250px;
-  -webkit-filter: url(#gooey);
-          filter: url(#gooey);
+  filter: url(#gooey);
   animation: animateLiquid 3s linear infinite reverse;
 }
-
 section .loader span {
   position: absolute;
   top: 0;
@@ -73,12 +56,10 @@ section .loader span {
   width: 100%;
   height: 100%;
   display: block;
-  -webkit-transform: rotate(calc(45deg * var(--i)));
-          transform: rotate(calc(45deg * var(--i)));
+  transform: rotate(calc(45deg * var(--i)));
 }
-
 section .loader span::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: calc(50% - 20px);
@@ -86,15 +67,11 @@ section .loader span::before {
   height: 40px;
   background: linear-gradient(45deg, #c7eeff, #5f03f4);
   border-radius: 50%;
-  -webkit-box-shadow: 0 0 30px #006ad4;
-          box-shadow: 0 0 30px #006ad4;
+  box-shadow: 0 0 30px #006ad4;
 }
-
 section .loader span.rotate {
-  -webkit-animation: animateLiquid 4s ease-in-out infinite;
-          animation: animateLiquid 4s ease-in-out infinite;
-  -webkit-animation-delay: calc(-0.2s * var(--j));
-          animation-delay: calc(-0.2s * var(--j));
+  animation: animateLiquid 4s ease-in-out infinite;
+  animation-delay: calc(-0.2s * var(--j));
 }
 
 svg {
@@ -104,62 +81,26 @@ svg {
 
 /* -------- CLASS & ID --------- */
 /* -------- ANIMATIONS --------- */
-@-webkit-keyframes animateLiquid {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
-}
 @keyframes animateLiquid {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
-@-webkit-keyframes animateBack {
-  0% {
-    opacity: 1;
-    -webkit-filter: saturate(0);
-            filter: saturate(0);
-  }
-  50% {
-    opacity: 0.5;
-    -webkit-filter: saturate(0.6);
-            filter: saturate(0.6);
-  }
-  100% {
-    opacity: 1;
-    -webkit-filter: saturate(0);
-            filter: saturate(0);
-  }
-}
-
 @keyframes animateBack {
   0% {
     opacity: 1;
-    -webkit-filter: saturate(0);
-            filter: saturate(0);
+    filter: saturate(0);
   }
   50% {
     opacity: 0.5;
-    -webkit-filter: saturate(0.6);
-            filter: saturate(0.6);
+    filter: saturate(0.6);
   }
   100% {
     opacity: 1;
-    -webkit-filter: saturate(0);
-            filter: saturate(0);
+    filter: saturate(0);
   }
 }
-
-/* -------- MEDIA QUERY --------- */
-/*# sourceMappingURL=style.css.map */
+/* -------- MEDIA QUERY --------- *//*# sourceMappingURL=style.css.map */

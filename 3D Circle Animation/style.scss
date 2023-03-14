@@ -1,0 +1,66 @@
+@import 'helpers';
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include reset();
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: $primary-purple;
+  // overflow: hidden;
+
+  @include flexDisplay(center, center, column, wrap);
+
+  min-height: 100vh;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+/* -------- CLASS & ID --------- */
+
+.circle {
+  position: relative;
+  .word {
+    transform-style: preserve-3d;
+    animation: rotateCircle 8s linear infinite;
+    color: $primary-dark;
+    font-size: 4em;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    position: absolute;
+  }
+
+  .char {
+    @include absoluteInit_top-left(0, 0);
+    padding: 5px 12px;
+    transform-origin: center;
+    border-top: 4px solid #35146f;
+    border-bottom: 4px solid #35146f;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transform: rotateY(calc(var(--char-index) * 18deg)) translateZ(270px);
+    width: 61px;
+    text-align: center;
+    place-content: center;
+  }
+}
+
+/* -------- ANIMATIONS --------- */
+@keyframes rotateCircle {
+  100% {
+    transform: perspective(1000px) rotateY(360deg) rotateX(20deg);
+  }
+}
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+}

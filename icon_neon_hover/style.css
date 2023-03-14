@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap");
+/* GLOBAL CONFIG RESET */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+select:focus, input:focus, button:focus {
+  outline: none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: #111;
+  overflow: hidden;
+  height: 100vh;
+}
+
+/* -------- TYPE SELECTORS --------- */
+.containerGlobal {
+  height: 100vh;
+  transform: rotate(10deg) translateX(0px) translateY(-100px) scale(1.2);
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.containerGlobal .row {
+  font-size: 3.5em;
+}
+.containerGlobal .row:nth-child(even) {
+  animation: speed1 calc(40s / var(--i)) infinite linear alternate;
+}
+.containerGlobal .row:nth-child(odd) {
+  animation: speed1 calc(4s * var(--i)) infinite linear alternate-reverse;
+}
+.containerGlobal .row span {
+  color: #000;
+  opacity: 0.3;
+  filter: blur(1px);
+  text-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 40px #0f0, 0 0 80px #0f0;
+  transition: 6s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.containerGlobal .row span:hover {
+  opacity: 1;
+  transition: 0s;
+  filter: blur(0px);
+  color: #0f0;
+}
+
+/* -------- CLASS & ID --------- */
+/* -------- ANIMATIONS --------- */
+@keyframes speed1 {
+  0% {
+    transform: translateX(0px);
+  }
+  0% {
+    transform: translateX(-100px);
+  }
+}
+/* -------- MEDIA QUERY --------- *//*# sourceMappingURL=style.css.map */

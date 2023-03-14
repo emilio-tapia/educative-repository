@@ -1,0 +1,136 @@
+@import 'helpers';
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include reset();
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background: linear-gradient(130deg, rgb(159, 189, 140), skyblue);
+  // overflow: hidden;
+
+  @include flexDisplay(center, center, column, wrap);
+
+  height: 100vh;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+/* -------- CLASS & ID --------- */
+
+.container {
+  max-width: 220px;
+  position: relative;
+  margin: 70px auto;
+  filter: url(#goo);
+  height: auto;
+}
+
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: none;
+
+  width: 220px;
+  height: 80px;
+  position: relative;
+  margin-bottom: 60px;
+  transition: 0.5s;
+
+  &:hover {
+    span {
+      height: 120%;
+      transition: 0.4s;
+    }
+  }
+
+  span {
+    display: block;
+    width: 20px;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    background: black;
+    transition: 0.7s;
+
+    &:nth-child(1) {
+      transition-delay: 0.25s;
+      left: 0;
+    }
+    &:nth-child(2) {
+      transition-delay: 0.2s;
+      left: 20px;
+    }
+    &:nth-child(3) {
+      transition-delay: 0.15s;
+      left: 40px;
+    }
+    &:nth-child(4) {
+      transition-delay: 0.1s;
+      left: 60px;
+    }
+    &:nth-child(5) {
+      transition-delay: 0.05s;
+      left: 80px;
+    }
+    &:nth-child(6) {
+      transition-delay: 0s;
+      left: 100px;
+    }
+    &:nth-child(7) {
+      transition-delay: 0.05s;
+      left: 120px;
+    }
+    &:nth-child(8) {
+      transition-delay: 0.1s;
+      left: 140px;
+    }
+    &:nth-child(9) {
+      transition-delay: 0.15s;
+      left: 160px;
+    }
+    &:nth-child(10) {
+      transition-delay: 0.2s;
+      left: 180px;
+    }
+    &:nth-child(11) {
+      transition-delay: 0.25s;
+      left: 200px;
+    }
+  }
+}
+
+p {
+  color: white;
+  font-size: 1.5rem;
+  z-index: 5;
+  position: relative;
+  transition: 0.5s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+svg {
+  display: none;
+}
+
+/* -------- ANIMATIONS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+}

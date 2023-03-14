@@ -1,8 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap");
 /* GLOBAL CONFIG RESET */
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
@@ -14,15 +13,9 @@ select:focus, input:focus, button:focus {
 /* -------- BODY DISPLAY --------- */
 body {
   background-color: #222;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
 
@@ -34,82 +27,50 @@ body {
   height: 400px;
   background: #2a2a2a;
   border-radius: 30%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-shadow: 0 5px 10px rgba(25, 25, 25, 0.2), 0 1px 10px #4f4f4f;
-          box-shadow: 0 5px 10px rgba(25, 25, 25, 0.2), 0 1px 10px #4f4f4f;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 10px rgba(25, 25, 25, 0.2), 0 1px 10px #4f4f4f;
 }
-
 .loader .circle {
   position: absolute;
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  -webkit-animation: animateCircle 1.5s linear infinite;
-          animation: animateCircle 1.5s linear infinite;
-  -webkit-box-shadow: 0 0 20px -5px var(--clr), inset 0 0 20px -5px var(--clr), 0 0 60px -5px var(--clr);
-          box-shadow: 0 0 20px -5px var(--clr), inset 0 0 20px -5px var(--clr), 0 0 60px -5px var(--clr);
+  animation: animateCircle 1.5s linear infinite;
+  box-shadow: 0 0 20px -5px var(--clr), inset 0 0 20px -5px var(--clr), 0 0 60px -5px var(--clr);
 }
-
 .loader .circle:nth-child(2) {
   width: 200px;
   height: 200px;
-  -webkit-animation: animateCircle 1.25s linear infinite;
-          animation: animateCircle 1.25s linear infinite;
+  animation: animateCircle 1.25s linear infinite;
 }
-
 .loader .circle:nth-child(3) {
   width: 100px;
   height: 100px;
-  -webkit-animation: animateCircle 1s linear infinite;
-          animation: animateCircle 1s linear infinite;
+  animation: animateCircle 1s linear infinite;
 }
-
 .loader .circle::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -12px;
   left: 50%;
   width: 20px;
   height: 20px;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   background: #2a2a2a;
   border: 2px solid var(--clr);
   border-radius: 50%;
-  -webkit-box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
-          box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
-}
-
-@-webkit-keyframes animateCircle {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+  box-shadow: 0 0 20px var(--clr), 0 0 60px var(--clr);
 }
 
 @keyframes animateCircle {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
-
 /* -------- PSEUDO CLASS --------- */
-/* -------- MEDIA QUERY --------- */
-/*# sourceMappingURL=style.css.map */
+/* -------- MEDIA QUERY --------- *//*# sourceMappingURL=style.css.map */
