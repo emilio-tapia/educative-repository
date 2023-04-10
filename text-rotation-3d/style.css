@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap");
+/* GLOBAL CONFIG RESET */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: #222;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+
+/* -------- TYPE SELECTORS --------- */
+/* -------- CLASS & ID --------- */
+.box {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  transform-style: preserve-3d;
+}
+.box > div {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  animation: textRotation 20s linear infinite;
+}
+.box span {
+  position: absolute;
+  inset: 0;
+  transform: rotateX(calc(var(--i) * 15deg));
+}
+.box span::before {
+  content: "EAT SLEEP RAVE";
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.8666666667);
+  text-transform: uppercase;
+  font-size: 8rem;
+  font-weight: 800;
+  -webkit-text-stroke: 2px #000;
+  text-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+.box span:nth-child(3n+2)::before {
+  color: rgba(227, 242, 253, 0.8666666667);
+}
+.box span:nth-child(3n+3)::before {
+  color: rgba(252, 228, 236, 0.8666666667);
+}
+
+/* -------- ANIMATIONS --------- */
+@keyframes textRotation {
+  0% {
+    transform: perspective(1000px) rotateX(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateX(360deg);
+  }
+}
+/* -------- MEDIA QUERY --------- *//*# sourceMappingURL=style.css.map */

@@ -1,0 +1,68 @@
+@import 'helpers';
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include reset();
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: $primary-light;
+  // overflow: hidden;
+
+  @include flexDisplay(center, center, column, wrap);
+
+  height: 100vh;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+main {
+  display: block;
+  min-height: 500px;
+  width: 80%;
+  border: 1px solid black;
+  @include flexDisplay(center, center, column, wrap);
+  position: relative;
+  background: black;
+
+  figure {
+    transform: scale(4);
+  }
+
+  .sprite {
+    transform: translate(-50%, -50%);
+    height: 50px;
+    width: 50px;
+    background: url('sonic-500px.png') no-repeat 0 0;
+    background-size: 550px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    animation: sonic 1.9s steps(11) infinite;
+  }
+}
+
+@keyframes sonic {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: -550px;
+  }
+}
+
+/* -------- CLASS & ID --------- */
+
+/* -------- ANIMATIONS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+}
