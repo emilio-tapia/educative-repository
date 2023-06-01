@@ -1,0 +1,57 @@
+@use 'helpers' as h;
+
+/* GLOBAL CONFIG RESET */
+* {
+  @include h.reset();
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: h.$primary-dark;
+  // overflow: hidden;
+
+  display: grid;
+  place-content: center;
+  place-items: center;
+  gap: 2rem;
+
+  height: 100vh;
+  color: h.$primary-light;
+}
+
+canvas {
+  aspect-ratio: 3/2;
+  border-radius: 1rem;
+  width: 50vw;
+}
+
+/* -------- TYPE SELECTORS --------- */
+
+/* -------- CLASS & ID --------- */
+
+/* -------- ANIMATIONS --------- */
+
+/* -------- MEDIA QUERY --------- */
+
+@media (max-width: 800px) {
+}

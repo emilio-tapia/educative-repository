@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    /> -->
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    /> -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section>
+      <!-- header -->
+      <div class="header">
+        <h6 class="text text1">Hello parallax lover</h6>
+        <h6 class="text mt-3" id="paroller-example">
+          Wanna see the beauty of scrolling and parallax effect
+        </h6>
+      </div>
+
+      <div
+        class="overlayImg img1"
+        style="
+          background: url('./img/n3.jpg') no-repeat center;
+          background-size: cover;
+        "
+      ></div>
+
+      <!-- text wrap -->
+      <div class="wrap">
+        <div class="text">
+          <h1>Interactive is king</h1>
+        </div>
+        <div
+          class="img text-center my-5 img2"
+          style="
+            background: url('./img/n8.jpg') no-repeat center;
+            background-size: cover;
+          "
+        ></div>
+      </div>
+
+      <!-- last 2 images -->
+      <div
+        class="overlayImg"
+        data-paroller-factor="0.25"
+        data-paroller-direction="horizontal"
+        style="
+          background: url('./img/9.jpg') no-repeat center;
+          background-size: cover;
+        "
+      ></div>
+      <div
+        class="overlayImg"
+        data-paroller-factor="-0.5"
+        data-paroller-direction="horizontal"
+        style="
+          background: url('./img/1.jpg') no-repeat center;
+          background-size: cover;
+        "
+      ></div>
+
+      <!-- footer -->
+      <h6
+        class="text footer"
+        data-paroller-factor=".1"
+        data-paroller-factor-md=".1"
+        data-paroller-type="foreground"
+        data-paroller-transition="transform .2s linear"
+      >
+        Keep scrolling pal! <br />
+        It feel buggy sometimes
+      </h6>
+    </section>
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.paroller.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap");
+/* GLOBAL CONFIG RESET */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: #222;
+  overflow-x: hidden;
+}
+
+[data-paroller-factor] {
+  position: relative;
+  z-index: 0;
+}
+
+.overlayImg {
+  background: hsla(0, 0%, 100%, 0.05);
+  padding: 2.5rem;
+  margin: 2rem auto;
+  min-height: 400px;
+}
+
+.d-flex {
+  display: flex;
+  width: 80%;
+  margin: 10% auto;
+}
+
+.header {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  place-items: center;
+}
+
+.image {
+  min-height: 300px;
+  padding: 3rem;
+  margin: 0.5rem;
+  min-width: 20%;
+  border-radius: 0.25rem;
+  border: 0;
+  display: inline-block;
+  position: relative;
+}
+
+.text {
+  font-size: 5rem;
+  line-height: 110%;
+  color: white;
+  text-align: center;
+}
+.text.footer {
+  padding: 20px;
+  margin: 5% auto;
+}
+
+.mt-3 {
+  margin-top: 40px;
+  font-size: 4.5rem;
+  padding: 20px;
+}
+
+.wrap {
+  display: grid;
+  grid-template-columns: 50% auto;
+}
+.wrap img {
+  width: 100%;
+  height: 100%;
+}
+.wrap .text {
+  font-size: 6rem;
+  padding: 20px;
+}
+
+/* -------- TYPE SELECTORS --------- */
+/* -------- CLASS & ID --------- */
+/* -------- ANIMATIONS --------- */
+/* -------- MEDIA QUERY --------- *//*# sourceMappingURL=style.css.map */

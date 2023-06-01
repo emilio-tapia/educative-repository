@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@400;600&family=Poppins:wght@100;500;600;800;900&family=Lobster+Two:ital,wght@0,400;0,700;1,400&display=swap");
+/* GLOBAL CONFIG RESET */
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+select:focus,
+input:focus,
+button:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* -------- BODY DISPLAY --------- */
+body {
+  background-color: #f9fafb;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
+  background-size: 50% 100%;
+  animation: moving 5s infinite linear;
+  position: absolute;
+  top: 0;
+}
+
+.w1 {
+  background-image: url("pattern.svg");
+}
+
+.ring {
+  background-image: url("ring.svg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  animation: rotating 1s infinite alternate ease-in-out;
+  width: 200px;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  filter: drop-shadow(0 0 5px black);
+  z-index: 10;
+}
+
+/* -------- TYPE SELECTORS --------- */
+/* -------- CLASS & ID --------- */
+/* -------- ANIMATIONS --------- */
+@keyframes moving {
+  0% {
+    background-position: 0 0;
+  }
+  0% {
+    background-position: 100vw 0;
+  }
+}
+@keyframes rotating {
+  0% {
+    transform: translate(-50%, -60%);
+  }
+  0% {
+    transform: translate(-50%, -40%);
+  }
+}
+/* -------- MEDIA QUERY --------- *//*# sourceMappingURL=style.css.map */
